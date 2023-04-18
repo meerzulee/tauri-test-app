@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "LabRichard",
-    "version": "0.0.0"
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -60,10 +60,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 840,
         "resizable": true,
         "title": "LabRichard",
-        "width": 800
+        "width": 1200
       }
     ]
   }
