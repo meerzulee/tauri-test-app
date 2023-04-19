@@ -53,7 +53,7 @@ function calculate() {
   console.log("mK", tk)
 
   data.forEach((x) => {
-    x.dk = tk - x.k
+    x.dk = Math.abs(tk - x.k)
     console.log("dk", x.dk);
     dk += x.dk
   })
@@ -125,7 +125,8 @@ function filter(e, { toFixed, toExpo }) {
             <td>{{ filter(d.Ts, { toFixed: 2 }) }}</td>
             <td>{{ filter(d.k, { toFixed: 2 }) }}</td>
             <td>{{ filter(d.dk, { toFixed: 3 }) }}</td>
-            <td class="text-xs !px-1" v-if="index === 0" :rowspan="data.length + 1">{{ filter(eps, { toExpo: 2 }) }}%</td>
+            <td class="text-xs !px-1" v-if="index === 0" :rowspan="data.length + 1">{{ filter(eps, { toFixed: 3 }) }}%
+            </td>
 
           </tr>
           <tr rowspan="3">
@@ -135,7 +136,7 @@ function filter(e, { toFixed, toExpo }) {
             <td colspan="3">
             </td>
             <td>{{ filter(mK, { toFixed: 3 }) }}</td>
-            <td>{{ filter(mDK, { toExpo: 1 }) }}</td>
+            <td>{{ filter(mDK, { toFixed: 3 }) }}</td>
           </tr>
         </tbody>
       </table>
